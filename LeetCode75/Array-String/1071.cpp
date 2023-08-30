@@ -35,6 +35,18 @@ public:
                 x += vecX.at(i);
             }
         }
+        else
+            return x;
+        if (vec1.size() > x.length()) {
+            if (vec1.at(x.length()) != x[0]) {
+                return "";
+            }
+        }
+        if (vec2.size() > x.length()) {
+            if (vec2.at(x.length()) != x[0]) {
+                return "";
+            }
+        }
         return x;
     }
 };

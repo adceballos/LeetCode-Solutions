@@ -1,3 +1,6 @@
+// Kids With the Greatest Number of Candies
+// first solution, beats 26.57% of C++ users with 5ms runtime
+// beats 76.60% of C++ users with 8.88mb memory
 class Solution {
 public:
     vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {

@@ -8,7 +8,10 @@ public:
             if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
                 chars.push(s[i]);
             }
-            else if (chars.empty() || (chars.top() == '(' && s[i] != ')') || (chars.top() == '[' && s[i] != ']') || (chars.top() == '{' && s[i] != '}')) {
+            else if (chars.empty() || 
+                (chars.top() == '(' && s[i] != ')') || 
+                (chars.top() == '[' && s[i] != ']') || 
+                (chars.top() == '{' && s[i] != '}')) {
                 return false;
             }
             else {

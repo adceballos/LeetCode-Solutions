@@ -17,8 +17,20 @@ public:
         return false;
     }
 };
+// Another solution that I learned from NeetCode is to insert each element from nums into a hash set, and if the sizes are equal then return false because you can't insert duplicates into hash sets
+// O(n)
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        std::unordered_set<int> m;
+        for (auto& num : nums) {
+            m.insert(num);
+        }
+        return (m.size() == nums.size()) ? false : true;
+    }
+};
 
-// Found a solution showing different ways to approach this problem, all of which can be used for other problems with specific use cases, so I wanted to put them here:
+// Found a solution on LeetCode showing different ways to approach this problem, all of which can be used for other problems with specific use cases, so I wanted to put them here:
 // Brute Force
 class Solution {
 public:

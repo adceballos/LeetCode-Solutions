@@ -39,3 +39,21 @@ public:
         return true;
     }
 };
+
+// I didn't really understand the for loop on line 36, so I realtered the code:
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if (s.size() != t.size()) return false;
+
+        std::unordered_map<char, int> smap;
+        std::unordered_map<char, int> tmap;
+
+        for (int i = 0; i < s.size(); i++) {
+            smap[s[i]]++;
+            tmap[t[i]]++;
+        }
+
+        return smap == tmap;
+    }
+};
